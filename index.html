@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Password Tools</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Password Tools</h1>
+    <p class="subtitle">Check password strength and generate strong passwords.</p>
+
+    <section class="card">
+      <h2>Password Strength Checker</h2>
+
+      <label for="passwordInput">Enter a password</label>
+      <input type="password" id="passwordInput" placeholder="Type a password..." />
+
+      <button id="togglePasswordBtn">Show password</button>
+
+      <div class="meter">
+        <div id="strengthBar"></div>
+      </div>
+
+      <p id="strengthText">Strength: Not checked</p>
+
+      <ul id="feedbackList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Password Generator</h2>
+
+      <label for="lengthInput">Password length</label>
+      <input type="number" id="lengthInput" min="8" max="64" value="16" />
+
+      <div class="options">
+        <label>
+          <input type="checkbox" id="uppercaseCheck" checked />
+          Uppercase letters
+        </label>
+
+        <label>
+          <input type="checkbox" id="lowercaseCheck" checked />
+          Lowercase letters
+        </label>
+
+        <label>
+          <input type="checkbox" id="numbersCheck" checked />
+          Numbers
+        </label>
+
+        <label>
+          <input type="checkbox" id="symbolsCheck" checked />
+          Symbols
+        </label>
+      </div>
+
+      <button id="generateBtn">Generate password</button>
+
+      <input type="text" id="generatedPassword" readonly placeholder="Generated password will appear here" />
+
+      <button id="copyBtn">Copy password</button>
+      <p id="copyMessage"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
